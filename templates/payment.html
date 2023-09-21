@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %}Payment {% endblock %}
+{% block content %}
+
+<div class="app-container">
+    <!-- begin app-nabar -->
+
+    <!-- begin app-main -->
+    <div class="app-main" id="main">
+        <!-- begin container-fluid -->
+        <div class="container-fluid">
+            <!-- begin row -->
+            <div class="row">
+                <div class="col-md-12 m-b-30">
+                    <!-- begin page title -->
+                    <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                        <div class="page-title mb-2 mb-sm-0">
+                            <h1 class="card-header">Make Payment</h1>
+                        </div>
+                        
+                    </div>
+                    <!-- end page title -->
+                </div>
+            </div>
+            <!-- end row -->
+            <!-- begin row -->
+            <div class="row">
+                
+                <div class="col-xl-6">
+                    <div class="card card-statistics">
+                        <div class="card-header">
+                            <div class="card-heading">
+                                <h4 class="card-title">Donate Using Visa</h4>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputAddress">Account Owner Name</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="Account User's Name">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Account Number</label>
+                                        <input type="number" class="form-control" id="inputEmail4" placeholder="9000213455677">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Phone Number</label>
+                                        <input type="number" class="form-control" id="inputPassword4" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                              
+                               
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">CVC</label>
+                                        <input type="text" class="form-control" id="inputCity" placeholder="CVC">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputState">Expiry Date </label>
+                                        <input type="date" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip" placeholder="256">
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Make Donation</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card card-statistics">
+                        <div class="card-header">
+                            <div class="card-heading">
+                                <h4 class="card-title">Donate Via Mobile Money</h4>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                         
+                                <form>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Mobile Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="+256777123456">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-3 col-form-label">Confirm Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="+256777123456">
+                                        </div>
+                                    </div>
+                                   
+                                  
+                                    <div class="form-group row">
+                                        <div class="col-sm-9">
+                                            <button type="submit" class="btn btn-primary">Make Donation</button>
+                                        </div>
+                                    </div>
+                                
+                                </form>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container-fluid -->
+    </div>
+    <!-- end app-main -->
+</div>
+
+
+{% endblock %}
+    

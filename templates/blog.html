@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Blog{% endblock %}
+{% block content %}
+
+
+
+
+
+
+    <div class="owl-carousel-wrapper">
+
+      
+
+      <div class="box-92819">
+        <h1 class="text-white mb-3">Blog</h1>
+        <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ab doloremque a quia laboriosam suscipit, iure illum perspiciatis!</p>
+      </div>
+
+      
+        <div class="ftco-cover-1 overlay" style="background-image: url('{{url_for('static',filename='images/hero_2.jpg')}}');"></div>
+      
+    </div>
+    
+    
+    <div class="site-section">
+      <div class="container">
+        <div class="heading-20219 mb-5">
+          <h2 class="title text-cursive">Latest Blog</h2>
+        </div>
+
+        <div class="row">
+          {% for a in data %}
+          <div class="col-md-6">
+            <div class="event-29191 mb-5">
+              <a href="#" class="d-block mb-3"><img src="{{a.img}}" alt="Image" class="img-fluid rounded" style="height:250px;width:460px;"></a>
+              <div class="px-3 d-flex">
+    
+                <div class="bg-primary p-3 d-inline-block text-center rounded mr-4 date">
+                 
+                  <span class="text-white small">
+                    <a href="/read/{{ a.blog_id }}"class="btn-primary" >Read More</a></span>
+                </div>
+    
+                <div>
+                  <div class="mb-3">
+                    <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">{{a.author}}</a></span>
+                    <span> <span class="icon-person mr-2 text-muted"></span>{{a.date}}</span>
+                  </div>
+                  <h3><a href="#">{{a.title}}</a></h3>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+
+          <div class="col-12 text-center">
+            <span class="p-3">1</span>
+            <a href="#" class="p-3">2</a>
+            <a href="#" class="p-3">3</a>
+            <a href="#" class="p-3">4</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <div class="site-section">
+      <div class="container">
+        
+            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
+              <div class=""><h2 class="text-cursive">Helping the Homeless, Hungry, and Hurtings Children</h2></div>
+              <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
+            </div>
+        
+      </div>
+    </div>
+    
+
+
+    {% endblock %}

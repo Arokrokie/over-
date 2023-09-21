@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% block title %}Ace Mission{% endblock %}
+{% block content %}
+
+
+
+
+
+
+<div class="owl-carousel-wrapper">
+
+      
+
+  <div class="box-92819">
+    <h1 class="text-white mb-3">Join The Movement To end Child Poverty</h1>
+    <p><a href="{{url_for('donate')}}" class="btn btn-primary py-3 px-4 rounded-0">Donate Now</a></p>
+  </div>
+
+  <div class="owl-carousel owl-1 ">
+    <div class="ftco-cover-1 overlay" style="background-image: url('{{url_for('static',filename='images/hero_1.jpg')}}');"></div>
+    <div class="ftco-cover-1 overlay" style="background-image: url('{{url_for('static',filename='images/hero_2.jpg')}}');"></div>
+    <div class="ftco-cover-1 overlay" style="background-image: url('{{url_for('static',filename='images/hero_3.jpg')}}');"></div>
+    
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="feature-29192-wrap d-md-flex" style="margin-top: -20px; position: relative; z-index: 2;">
+
+    <a href="#" class="feature-29192 overlay-danger" style="background-image: url('{{url_for('static',filename='images/img_3_gray.jpg')}}');">
+      <div class="text">
+        <span class="meta">Livelihood</span>
+        <h3 class="text-cursive text-white h1">Livelihood</h3>
+      </div>
+    </a>
+
+    <a class="feature-29192 overlay-success" style="background-image: url('{{url_for('static',filename='images/img_2_gray.jpg')}}');">
+      <div class="text">
+        <span class="meta">Health</span>
+        <h3 class="text-cursive text-white h1">Natural Remedies</h3>
+      </div>
+    </a>
+
+    <div class="feature-29192 overlay-warning" style="background-image: url('{{url_for('static',filename='images/img_1_gray.jpg')}}');">
+      <div class="text">
+        <span class="meta">School</span>
+        <h3 class="text-cursive text-white h1">New Class Rooms</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    
+    <div class="row mb-5 align-items-st">
+      <div class="col-md-4">
+        <div class="heading-20219">
+          <h2 class="title text-cursive" >Our Services</h2>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ea reprehenderit rerum magnam, ipsum aperiam. Earum, expedita ratione.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for a in rows %}
+      <div class="col-md-6">
+        <div class="event-29191 mb-5">
+          <a href="#" class="d-block mb-3"><img src="{{a.img}}" alt="Image" class="img-fluid rounded" style="height:250px;width:460px;color:#777777;"></a>
+          <div class="px-3 d-flex">
+
+            <div class="bg-primary p-3 d-inline-block text-center rounded mr-4 date">
+             
+              <span class="text-white small">{{a.date}}</span>
+            </div>
+
+            <div>
+              <div class="mb-3">
+                <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">{{a.name}}</a></span>
+                <span> <span class="icon-person mr-2 text-muted"></span>{{a.place}}</span>
+              </div>
+              <h3><a href="#">{{a.title}}</a></h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="bg-image overlay site-section" style="background-image: url('{{url_for('static',filename='images/hero_1.jpg')}}');">
+  <div class="container">
+
+    <div class="row align-items-center">
+      <div class="col-12">
+        <div class="row mb-5">
+          <div class="col-md-7">
+            <div class="heading-20219">
+              <h2 class="title text-white mb-4 text-cursive">Why We Operate</h2>
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ipsam repellendus voluptatum, totam magni iusto numquam quo eos dolor perferendis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-5">
+            <div class="feature-29012 d-flex">
+              <div class="number mr-4"><span>1</span></div>
+              <div>
+                <h3>Our Motto</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id sint explicabo odit reiciendis eaque accusamus labore necessitatibus.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="feature-29012 d-flex">
+              <div class="number mr-4"><span>2</span></div>
+              <div>
+                <h3>Our Vision</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id sint explicabo odit reiciendis eaque accusamus labore necessitatibus.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-5">
+            <div class="feature-29012 d-flex">
+              <div class="number mr-4"><span>3</span></div>
+              <div>
+                <h3>Our Mission</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id sint explicabo odit reiciendis eaque accusamus labore necessitatibus.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="feature-29012 d-flex">
+              <div class="number mr-4"><span>4</span></div>
+              <div>
+                <h3>Core Values</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id sint explicabo odit reiciendis eaque accusamus labore necessitatibus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="heading-20219 mb-5">
+      <h2 class="title text-cursive">Latest Events</h2>
+    </div>
+
+    <div class="row">
+      {% for a in events %}
+      <div class="col-md-6">
+        <div class="event-29191 mb-5">
+          <a href="#" class="d-block mb-3"><img src="{{a.img}}" alt="Image" class="img-fluid rounded" style="height:250px;width:460px;"></a>
+          <div class="px-3 d-flex">
+
+            <div class="bg-primary p-3 d-inline-block text-center rounded mr-4 date">
+             
+              <span class="text-white small">{{a.date}}</span>
+            </div>
+
+            <div>
+              <div class="mb-3">
+                <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">{{a.name}}</a>, <a href="#">Event</a></span>
+                <span> <span class="icon-person mr-2 text-muted"></span>{{a.author}}</span>
+              </div>
+              <h3><a href="#">{{a.title}}</a></h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    
+      
+    </div>
+  </div>
+</div>
+
+<div class="site-section bg-image overlay-primary" style="background-image: url('{{url_for('static',filename='images/img_1.jpg')}}');">
+  <div class="container">
+    <div class="row align-items-stretch">
+      <div class="col-md-6">
+        <video width="420" height="340"  controls> 
+          <source src="{{url_for('static',filename='uploads/rabby.mp4')}}" 
+          type="video/mp4">
+          Title: Morning power
+          Artist: Rabby LG
+        </video>
+        <h3 class="mb-4" style="color:white;">The Outreach of our Association.</h3>
+
+      </div>
+      <div class="col-md-6">
+        <div class="bg-white h-100 p-4 shadow">
+          <h3 class="mb-4 text-cursive">Donate Now</h3>
+          <form action="#">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Amount in dollar">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Donate Now" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    
+        <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
+          <div class=""><h2 class="text-cursive">Helping the Homeless, Hungry, and Hurtings Children</h2></div>
+          <div class="ml-auto"><a href="{{url_for('donate')}}" class="btn btn-primary">Donate Now</a></div>
+        </div>
+    
+  </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+
+
+<div class="app-main" id="main">
+    <!-- begin container-fluid -->
+    <div class="container-fluid">
+        <!-- begin row -->
+        <div class="row">
+            <div class="col-md-12 m-b-30">
+                <!-- begin page title -->
+                <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                    <div class="page-title mb-2 mb-sm-0">
+                        <h1>Account Settings</h1>
+                    </div>
+                    <div class="ml-auto d-flex align-items-center">
+                        <nav>
+                            <ol class="breadcrumb p-0 m-b-0">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html"><i class="ti ti-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    Pages
+                                </li>
+                                <li class="breadcrumb-item active text-primary" aria-current="page">Account Settings</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- end page title -->
+            </div>
+        </div>
+        <!-- end row -->
+
+        <!--mail-Compose-contant-start-->
+        <div class="row account-contant">
+            <div class="col-12">
+                <div class="card card-statistics">
+                    <div class="card-body p-0">
+                        <div class="row no-gutters">
+                            <div class="col-xl-3 pb-xl-0 pb-5 border-right">
+                                <div class="page-account-profil pt-5">
+                                    <div class="profile-img text-center rounded-circle">
+                                        <div class="pt-5">
+                                            <div class="bg-img m-auto">
+                                                <img src="{{ session.pic}}" class="img-fluid" alt="AA">
+                                            </div>
+                                            <div class="profile pt-4">
+                                                <h4 class="mb-1">{{ session.name}}</h4>
+                                                <p>{{session.username}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                          
+
+                                    <div class="profile-btn text-center">
+                                        <div><a href="{{url_for('profile_upload')}}"  class="btn btn-primary mb-2">Upload Avatar</a>
+                                        </div>
+                                  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-md-6 col-12 border-t border-right">
+                                <div class="page-account-form">
+                                    <div class="form-titel border-bottom p-3">
+                                        <h5 class="mb-0 py-2">Edit Your Personal Settings</h5>
+                                    </div>
+                                    
+                                    <div class="p-4">
+                                        <form method="POST">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="name1">Full Name</label>
+                                                    <input type="text" name="name" class="form-control" id="name1" value="{{session.name}}">
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label for="add1">Username</label>
+                                                    <input type="text" name="username" class="form-control" id="name1" value="{{session.username}}">
+                                                </div>   
+                                                <div class="form-group col-md-12">
+                                                    <label for="email1">Email</label>
+                                                    <input type="email" name="email" class="form-control" id="email1" value="{{session.email}}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label for="phone1">Phone Number</label>
+                                                <input type="number" name="phone" class="form-control" id="phone1" value="{{session.phone}}">
+                                            </div>
+                                            <div class="form-row">
+                                          
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">
+                                                        I agree to receive email notification.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <a href="/edit/{{session.user_id }}" class="btn btn-primary">Update Information</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--mail-Compose-contant-end-->
+    </div>
+    <!-- end container-fluid -->
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Gallery{% endblock %}
+{% block content %}
+
+
+  
+<div class="site-section">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-primary" href="/uploadimg">Upload Image</a>
+            
+<h1>Image Gallery</h1>
+<div class="cause shadow-sm " style="display:grid;grid-template-columns: repeat(4, 1fr); grid-gap: 10px;">
+{% for image in images %}    
+          <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="" class="img-fluid" style="height:250px;width:260px;">         
+
+  
+{% endfor %}
+
+</div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}
+    

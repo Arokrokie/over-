@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Blog Upload {% endblock %}
+{% block content %}
+
+
+  
+<div class="site-section">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+           
+            <div class="modal-body">
+                <form method="POST" action="" enctype="multipart/form-data">
+                
+                    <div class="form-group">
+                        <label class="text-black font-w500">Image:</label>
+                        <input class="form-control" type="file" name="pic" value="" />
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" name="upload">UPLOAD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}
+    
+
+
+
+

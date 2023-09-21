@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Read Post {% endblock %}
+{% block content %}
+
+
+
+ 
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% for a in data %}   
+                <h1>{{ a.title }}</h1>
+                <p>{{ a.blogbody }}</p>
+                <p>Author: {{ a.author }}</p>
+                <p>Date: {{ a.date }}</p>
+                <a href="{{url_for('index')}}">Back to Home</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+{% endblock %}
+    
